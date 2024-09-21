@@ -17,7 +17,7 @@
                             </div>
                         @endif
 
-                        {{ __('You are logged in!') }}
+                        <p>Sei dentro alla nuova home di admin</p>
                     </div>
                 </div>
             </div>
