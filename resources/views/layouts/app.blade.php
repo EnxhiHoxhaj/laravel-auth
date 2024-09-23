@@ -7,10 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Boolpress|Admin</title>
 
-    @yield(['resouces/js/app.js'])
+    @vite(['resources/js/app.js'])
 </head>
 
 <body>
+
+    @include('admin.partials.header')
+    @include('admin.partials.aside')
+    @yield('content')
+    @include('admin.partials.footer')
+
+
 
 </body>
 
