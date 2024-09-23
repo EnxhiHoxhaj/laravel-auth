@@ -5,7 +5,7 @@ header{
         font-size: 20px;
 
         &:hover {
-            color: rgb(0, 153, 255);
+            color: rgb(0, 183, 255);
             text-decoration: underline;
         }
     }
@@ -13,4 +13,8 @@ header{
 
 .pub a {
     font-size: 28px;
+}
+
+li{
+    list-style: none;
 }
