@@ -1,0 +1,16 @@
+header{
+    a {
+        text-decoration: none;
+        color: rgb(117, 117, 117);
+        font-size: 20px;
+
+        &:hover {
+            color: rgb(0, 153, 255);
+            text-decoration: underline;
+        }
+    }
+}
+
+.pub a {
+    font-size: 28px;
+}
