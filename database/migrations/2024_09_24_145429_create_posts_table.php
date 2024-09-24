@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('title', 100);
             $table->string('slug', 110);
             $table->text('content');
-            $table->dateTime('created-dy', precision: 0);
+            $table->integer('visit');
+            $table->integer('positive_votes');
+            $table->integer('negative_votes');
             $table->timestamps();
         });
     }
