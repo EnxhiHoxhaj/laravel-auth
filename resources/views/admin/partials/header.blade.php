@@ -1,6 +1,6 @@
 <header>
-    <div class="container-fluid bg-secondary-subtle">
-        <nav class="row justify-content-between py-3">
+    <div class="container-fluid">
+        <nav class="row justify-content-between py-2">
             <div class="col-2 pub">
                 <a href="{{ route('home') }}">Boolpress</a>
             </div>

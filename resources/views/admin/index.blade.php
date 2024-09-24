@@ -2,6 +2,6 @@
 
 @section('content')
     <div class="container">
-        {{-- <h1>Index admin</h1> --}}
+        <h1>Index admin</h1>
     </div>
 @endsection

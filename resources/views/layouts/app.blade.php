@@ -13,9 +13,11 @@
 <body>
 
     @include('admin.partials.header')
-    @include('admin.partials.aside')
-    @yield('content')
-    @include('admin.partials.footer')
+    <div class="d-flex">
+        @include('admin.partials.aside')
+        @yield('content')
+    </div>
+    {{-- @include('admin.partials.footer') --}}
 
 
 
