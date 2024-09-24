@@ -28,13 +28,13 @@ li{
 }
 aside {
     padding-top: 15px;
-    font-size: 15px;
     width: 200px;
     height: 100%;
     border-right: solid gray 0.1px; ;
 }
 
-.ul-aside li {
+.ul-aside a {
+    font-size: 15px;
     color: rgb(117, 117, 117);
     &:hover {
         color: rgb(0, 183, 255);;
