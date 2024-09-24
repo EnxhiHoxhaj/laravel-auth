@@ -20,7 +20,10 @@ Route::get('/', [PageController::class, 'index'])->name('home');
 
 Route::middleware (['auth', 'verified'])->prefix('admin')->name('admin.')->group(function(){
     Route::get('/', [DashboardController::class, 'index'])->name('home');
+    Route::resource('posts', PostController::class);
 });
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
