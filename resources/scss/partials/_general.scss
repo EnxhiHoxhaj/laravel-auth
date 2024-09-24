@@ -23,11 +23,14 @@ li{
     list-style: none;
 }
 
+.main{
+    height: calc(100vh - 62px);
+}
 aside {
     padding-top: 15px;
     font-size: 15px;
     width: 200px;
-    height: calc(100vh - 62px);
+    height: 100%;
     border-right: solid gray 0.1px; ;
 }
 
