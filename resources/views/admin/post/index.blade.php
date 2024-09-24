@@ -13,6 +13,9 @@
                     <th scope="col">Visite</th>
                     <th scope="col">Like</th>
                     <th scope="col">Dislike</th>
+                    <th scope="col">Dettaglio</th>
+                    <th scope="col">Edita</th>
+                    <th scope="col">Elimina</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,6 +29,9 @@
                         <td>{{ $post->positive_votes }}</td>
                         <td>{{ $post->negative_votes }}</td>
                         <td>{{ $post->created_at }}</td>
+                        <td><a href="{{ route('admin.posts.show', $post->id) }}"><i class="fa-regular fa-eye"></i></a></td>
+                        <td><i class="fa-solid fa-pen-to-square"></i></td>
+                        <td><i class="fa-solid fa-trash"></i></td>
                     </tr>
                 @endforeach
             </tbody>

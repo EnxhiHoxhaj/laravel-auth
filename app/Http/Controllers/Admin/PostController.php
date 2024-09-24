@@ -38,7 +38,8 @@ class PostController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $posts = Post::find($id);
+        return view('admin.post.show', compact('posts'));
     }
 
     /**
