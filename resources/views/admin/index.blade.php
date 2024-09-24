@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container-fluid">
-        <h1>{{ $n_post }}</h1>
-        <h3>{{ $n_post }}</h3>
+        <h1>Benvenuto nella Dashboard</h1>
+        <h3>Sono presenti {{ $n_post }} posts al momento</h3>
         <table class="table">
             <thead>
                 <tr>

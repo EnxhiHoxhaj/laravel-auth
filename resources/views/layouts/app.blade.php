@@ -16,7 +16,10 @@
 
     @include('admin.partials.header')
     <div class="d-flex main">
-        @include('admin.partials.aside')
+        @auth
+            @include('admin.partials.aside')
+        @endauth
+
         @yield('content')
     </div>
     {{-- @include('admin.partials.footer') --}}
