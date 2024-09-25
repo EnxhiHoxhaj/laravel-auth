@@ -11,4 +11,13 @@ class Post extends Model
     protected $casts = [
         'created_at'=>'datetime:d/m/Y',
     ];
+
+    protected $fillable = [
+            'title',
+            'slug',
+            'content',
+            'visit',
+            'positive_votes',
+            'negative_votes'
+    ];
 }
