@@ -18,6 +18,6 @@ class Post extends Model
             'content',
             'visit',
             'positive_votes',
-            'negative_votes'
+            'negative_votes',
     ];
 }
