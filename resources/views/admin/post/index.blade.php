@@ -32,7 +32,17 @@
                         <td><a href="{{ route('admin.posts.show', $post->id) }}"><i class="fa-regular fa-eye"></i></a></td>
                         <td><a href="{{ route('admin.posts.edit', $post) }}"><i class="fa-solid fa-pen-to-square"></i></a>
                         </td>
-                        <td><i class="fa-solid fa-trash"></i></td>
+                        <td>
+                            <form action="{{ route('admin.posts.destroy', $post) }}" method="POST"
+                                onsubmit="return confirm('Sicuro di voler eliminare il post?')">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </form>
+                        </td>
+
                     </tr>
                 @endforeach
             </tbody>
