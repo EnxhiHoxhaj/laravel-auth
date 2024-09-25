@@ -11,7 +11,8 @@
                 <label for="validationCustom01" class="form-label">
                     Titolo
                 </label>
-                <input type="text" class="form-controlid=" required name="title" value="{{ $edit_post->title }}">
+                <input type="text" class="form-controlid=" id="validationCustom02" required name="title"
+                    value="{{ $edit_post->title }}">
 
             </div>
             <div class="col-md-4 py-4 d-flex flex-column txt">

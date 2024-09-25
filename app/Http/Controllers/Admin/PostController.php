@@ -53,8 +53,8 @@ class PostController extends Controller
      */
     public function show(string $id)
     {
-        $posts = Post::find($id);
-        return view('admin.post.show', compact('posts'));
+        $post = Post::find($id);
+        return view('admin.post.show', compact('post'));
     }
 
     /**
@@ -71,17 +71,17 @@ class PostController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $data= $request->all();
-        $post= Post::find($id);
-        if($data['title'] = $post->title){
+        $data = $request->all();
+        $post = Post::find($id);
+
+        if($data['title'] === $post->title){
             $data ['slug']= $post->slug;
         } else {
-            $data['slug'] = Helper::generateSlug($post->title, Post::class);;
+            $data['slug'] = Helper::generateSlug($data['title']. Post::class);
         }
-        $post->updated_at = now();
         $post->update($data);
-        return redirect()->route('admin.posts.show', $post);
 
+        return redirect()->route('admin.posts.show', $post);
     }
 
     /**
