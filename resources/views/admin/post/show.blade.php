@@ -19,7 +19,7 @@
                     <span class="card-text">{{ $posts->visit }}</span>
                 </div>
                 <div class="p-1">
-                    <span class="card-text">{{ $posts->positive_votes }}<strong>Like</strong></span>
+                    <span class="card-text"><strong>Like: </strong>{{ $posts->positive_votes }}</strong></span>
                     <span></span>
                 </div>
                 <div class="p-1">

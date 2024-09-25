@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Http\Requests\PostsRequest;
+use App\Functions\Helper;
+use Faker\Generator as Faker;
 
 class PostController extends Controller
 {
@@ -29,14 +31,21 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(PostsRequest $request)
+    public function store(PostsRequest $request, Faker $faker)
     {
 
         $data= $request->all();
         $new_post= new Post();
+        $new_post->slug = Helper::generateSlug($new_post->title, Post::class);
+        $new_post->visit= $faker->numberBetween(0, 0);
+        $new_post->positive_votes= $faker ->numberBetween(0, 0);
+        $new_post->negative_votes= $faker ->numberBetween(0, 0);
+        $new_post->created_at = $faker->dateTimeBetween('-1 year', 'now');
+        $new_post->updated_at = now();
+
         $new_post-> fill($data);
         $new_post->save();
-        return redirect()->route('posts.show', $new_post ->id);
+        return redirect()->route('admin.posts.show', $new_post ->id);
     }
 
     /**
