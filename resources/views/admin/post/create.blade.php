@@ -31,8 +31,8 @@
             </div>
             <div class="col-md-4 py-4 d-flex flex-column txt">
                 <label for="validationCustom02" class="form-label">Contenuto</label>
-                <textarea class="form-control @error('content') is-invalid @enderror" name="content" value="{{ old('content') }}"
-                    id="validationCustom02" cols="30" rows="10"></textarea>
+                <textarea class="form-control @error('content') is-invalid @enderror" name="content" id="validationCustom02"
+                    cols="30" rows="10">{{ old('content') }}</textarea>
                 @error('content')
                     <small class="text-danger"> {{ $message }}</small>
                 @enderror
