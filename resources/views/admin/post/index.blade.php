@@ -30,7 +30,9 @@
                         <td>{{ $post->negative_votes }}</td>
                         <td>{{ $post->created_at }}</td>
                         <td><a href="{{ route('admin.posts.show', $post->id) }}"><i class="fa-regular fa-eye"></i></a></td>
-                        <td><i class="fa-solid fa-pen-to-square"></i></td>
+                        <td><a href="{{ route('admin.posts.edit', $post->id) }}"><i
+                                    class="fa-solid fa-pen-to-square"></i></a>
+                        </td>
                         <td><i class="fa-solid fa-trash"></i></td>
                     </tr>
                 @endforeach

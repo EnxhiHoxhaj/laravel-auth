@@ -21,8 +21,7 @@
                 <label for="validationCustom01" class="form-label">
                     Titolo
                 </label>
-                <input type="text" class="form-control @error('title') is-invalid @enderror
-" id="validationCustom01"
+                <input type="text" class="form-control @error('title') is-invalid @enderror" id="validationCustom01"
                     required name="title" value="{{ old('title') }}">
                 @error('title')
                     <small class="text-danger"> {{ $message }}</small>
