@@ -25,6 +25,7 @@ li{
 
 .main{
     height: calc(100vh - 62px);
+    overflow: hidden;
 }
 aside {
     padding-top: 15px;
@@ -44,4 +45,8 @@ aside {
 
 .pers {
     height: fit-content;
+}
+
+.content {
+    overflow: auto;
 }

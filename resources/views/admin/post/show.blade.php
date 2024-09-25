@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="container-fluid d-flex justify-content-center align-items-center content">
         <div class="card pers" style="width: 18rem;">
             <div class="card-body">
                 <div class="p-1">

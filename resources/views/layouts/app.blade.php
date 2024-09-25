@@ -21,6 +21,8 @@
         @endauth
 
         @yield('content')
+
+
     </div>
     {{-- @include('admin.partials.footer') --}}
 
