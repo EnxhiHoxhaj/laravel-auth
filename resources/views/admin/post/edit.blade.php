@@ -3,9 +3,8 @@
     <div class="container-fluid content p-5">
         <h1 class="n-txt">Modifica post</h1>
 
-        <form class="form d-flex flex-column" action="{{ route('admin.posts.edit', $edit_post) }}" method="POST"
+        <form class="form d-flex flex-column" action="{{ route('admin.posts.update', $edit_post) }}" method="POST"
             class="row g-3 needs-validation" novalidate>
-
             @csrf
             @method('PUT')
             <div class="col-md-4 d-flex flex-column py-4 txt">
@@ -20,7 +19,7 @@
                 <textarea class="form-control" name="content" id="validationCustom02" cols="30" rows="10">{{ $edit_post->content }}</textarea>
             </div>
             <div class="col-12">
-                <button class="btn btn-primary add" type="submit">Add to posts list</button>
+                <button class="btn btn-primary add" type="submit">Aggiorna</button>
             </div>
         </form>
     @endsection
