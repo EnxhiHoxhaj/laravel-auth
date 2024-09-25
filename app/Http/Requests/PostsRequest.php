@@ -24,6 +24,7 @@ class PostsRequest extends FormRequest
         return [
             'title'=>'required | max:100',
             'content'=>'required',
+            'updated_at' => now(),
         ];
     }
 

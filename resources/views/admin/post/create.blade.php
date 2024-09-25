@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="container-fluid content p-5">
-        <h1>Crea nuovo post</h1>
+        <h1 class="n-txt">Crea nuovo post</h1>
         @if ($errors->any())
             <div class="alert alert-danger" role="alert">
                 <ul>
@@ -12,23 +12,35 @@
                 </ul>
             </div>
         @endif
-        <form action="{{ route('admin.posts.store') }}" method="POST" class="row g-3 needs-validation" novalidate>
+
+        <form class="form d-flex flex-column" action="{{ route('admin.posts.store') }}" method="POST"
+            class="row g-3 needs-validation" novalidate>
 
             @csrf
-            <div class="col-md-4">
+            <div class="col-md-4 py-4 txt">
                 <label for="validationCustom01" class="form-label">
                     Titolo
                 </label>
-                <input type="text" class="form-control" id="validationCustom01" required name="title"
-                    value="{{ old('title') }}">
+                <input type="text" class="form-control @error('title') is-invalid @enderror
+" id="validationCustom01"
+                    required name="title" value="{{ old('title') }}">
+                @error('title')
+                    <small class="text-danger"> {{ $message }}</small>
+                @enderror
+
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 py-4 d-flex flex-column txt">
                 <label for="validationCustom02" class="form-label">Contenuto</label>
-                <textarea name="content" value="{{ old('content') }}" id="" cols="30" rows="10"></textarea>
+                <textarea class="form-control @error('content') is-invalid @enderror" name="content" value="{{ old('content') }}"
+                    id="validationCustom02" cols="30" rows="10"></textarea>
+                @error('content')
+                    <small class="text-danger"> {{ $message }}</small>
+                @enderror
             </div>
             <div class="col-12">
-                <button class="btn btn-primary" type="submit">Add to posts list</button>
+                <button class="btn btn-primary add" type="submit">Add to posts list</button>
             </div>
         </form>
+
     </div>
 @endsection
